@@ -31,6 +31,7 @@ export const SettingsSchema = z.object({
     voiceAssistantLanguage: z.string().nullable().describe('Preferred language for voice assistant (null for auto-detect)'),
     voiceCustomAgentId: z.string().nullable().describe('Custom ElevenLabs agent ID (null to use Happy default)'),
     voiceBypassToken: z.boolean().describe('Bypass Happy server token and connect directly to ElevenLabs (requires custom agent ID)'),
+    voiceBackgroundAudio: z.boolean().describe('Keep voice active when app is in background (Android)'),
     preferredLanguage: z.string().nullable().describe('Preferred UI language (null for auto-detect from device locale)'),
     recentMachinePaths: z.array(z.object({
         machineId: z.string(),
@@ -97,6 +98,7 @@ export const settingsDefaults: Settings = {
     voiceAssistantLanguage: null,
     voiceCustomAgentId: null,
     voiceBypassToken: false,
+    voiceBackgroundAudio: false,
     preferredLanguage: null,
     recentMachinePaths: [],
     lastUsedAgent: null,

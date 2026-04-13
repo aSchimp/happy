@@ -583,6 +583,10 @@ export const zhHans: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `已使用 ${used}，共 ${limit}`,
         supportTitle: '升级语音',
         supportSubtitle: '获取更多语音时间并支持开发',
+        backgroundAudioTitle: '后台音频',
+        backgroundAudioDescription: '启用后，离开应用时语音将保持活跃。语音运行期间会显示通知。',
+        backgroundAudio: '在后台保持语音活跃',
+        backgroundAudioSubtitle: '防止系统在应用处于后台时停止语音',
     },
 
     settingsAccount: {

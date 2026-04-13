@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, Platform } from 'react-native';
 import { Text } from '@/components/StyledText';
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -31,6 +31,7 @@ export default React.memo(function VoiceSettingsScreen() {
     const [voiceAssistantLanguage] = useSettingMutable('voiceAssistantLanguage');
     const [voiceCustomAgentId, setVoiceCustomAgentId] = useSettingMutable('voiceCustomAgentId');
     const [voiceBypassToken, setVoiceBypassToken] = useSettingMutable('voiceBypassToken');
+    const [voiceBackgroundAudio, setVoiceBackgroundAudio] = useSettingMutable('voiceBackgroundAudio');
     const [voiceUpsellOverride, setVoiceUpsellOverride] = useLocalSettingMutable('voiceUpsellOverride');
     const experiments = useSetting('experiments');
     const devModeEnabled = __DEV__ || useLocalSetting('devModeEnabled');
@@ -215,6 +216,26 @@ export default React.memo(function VoiceSettingsScreen() {
                         subtitleLines={0}
                         icon={<Ionicons name="refresh-outline" size={29} color="#FF9500" />}
                         onPress={handleResetVoiceCounters}
+                    />
+                </ItemGroup>
+            )}
+
+            {/* Background Audio (native only) */}
+            {Platform.OS !== 'web' && (
+                <ItemGroup
+                    title={t('settingsVoice.backgroundAudioTitle')}
+                    footer={t('settingsVoice.backgroundAudioDescription')}
+                >
+                    <Item
+                        title={t('settingsVoice.backgroundAudio')}
+                        subtitle={t('settingsVoice.backgroundAudioSubtitle')}
+                        icon={<Ionicons name="volume-high-outline" size={29} color="#34C759" />}
+                        rightElement={
+                            <Switch
+                                value={voiceBackgroundAudio}
+                                onValueChange={setVoiceBackgroundAudio}
+                            />
+                        }
                     />
                 </ItemGroup>
             )}

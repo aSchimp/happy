@@ -591,6 +591,10 @@ export const ru: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${used} использовано из ${limit}`,
         supportTitle: 'Улучшить голос',
         supportSubtitle: 'Больше голосового времени и поддержка разработки',
+        backgroundAudioTitle: 'Фоновое аудио',
+        backgroundAudioDescription: 'Когда включено, голос остаётся активным при выходе из приложения. Пока голос работает, будет отображаться уведомление.',
+        backgroundAudio: 'Оставлять голос активным в фоне',
+        backgroundAudioSubtitle: 'Не позволять системе останавливать голос, когда приложение свёрнуто',
     },
 
     settingsAccount: {

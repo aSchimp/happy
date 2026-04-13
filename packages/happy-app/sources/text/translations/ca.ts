@@ -582,6 +582,10 @@ export const ca: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${used} utilitzat de ${limit}`,
         supportTitle: 'Millorar veu',
         supportSubtitle: 'Més temps de veu i suport al desenvolupament',
+        backgroundAudioTitle: 'Àudio en segon pla',
+        backgroundAudioDescription: 'Quan està activat, la veu es manté activa en sortir de l\'app. Apareixerà una notificació mentre la veu estigui en funcionament.',
+        backgroundAudio: 'Mantenir la veu activa en segon pla',
+        backgroundAudioSubtitle: 'Evitar que el sistema aturi la veu quan l\'app està en segon pla',
     },
 
     settingsAccount: {

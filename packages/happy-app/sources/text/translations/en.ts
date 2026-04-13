@@ -596,6 +596,10 @@ export const en: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${used} used of ${limit}`,
         supportTitle: 'Upgrade Voice',
         supportSubtitle: 'Get more voice time and support development',
+        backgroundAudioTitle: 'Background Audio',
+        backgroundAudioDescription: 'When enabled, voice stays active when you leave the app. A notification will appear while voice is running.',
+        backgroundAudio: 'Keep Voice Active in Background',
+        backgroundAudioSubtitle: 'Prevent the system from stopping voice when the app is in the background',
     },
 
     settingsAccount: {
