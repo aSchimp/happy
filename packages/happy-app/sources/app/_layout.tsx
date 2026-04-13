@@ -44,13 +44,20 @@ Notifications.setNotificationHandler({
     }),
 });
 
-// Setup Android notification channel (required for Android 8.0+)
+// Setup Android notification channels (required for Android 8.0+)
 if (Platform.OS === 'android') {
     Notifications.setNotificationChannelAsync('default', {
         name: 'Default',
         importance: Notifications.AndroidImportance.MAX,
         vibrationPattern: [0, 250, 250, 250],
         lightColor: '#FF231F7C',
+    });
+    Notifications.setNotificationChannelAsync('voice', {
+        name: 'Voice Assistant',
+        importance: Notifications.AndroidImportance.LOW,
+        sound: undefined,
+        vibrationPattern: null,
+        lockscreenVisibility: Notifications.AndroidNotificationVisibility.PUBLIC,
     });
 }
 
