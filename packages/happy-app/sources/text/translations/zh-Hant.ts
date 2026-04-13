@@ -582,6 +582,10 @@ export const zhHant: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `已使用 ${used}，共 ${limit}`,
         supportTitle: '升級語音',
         supportSubtitle: '獲取更多語音時間並支持開發',
+        backgroundAudioTitle: '背景音訊',
+        backgroundAudioDescription: '啟用後，離開應用程式時語音將保持活躍。語音運行期間會顯示通知。',
+        backgroundAudio: '在背景保持語音活躍',
+        backgroundAudioSubtitle: '防止系統在應用程式處於背景時停止語音',
     },
 
     settingsAccount: {

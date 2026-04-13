@@ -582,6 +582,10 @@ export const es: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${used} usado de ${limit}`,
         supportTitle: 'Mejorar voz',
         supportSubtitle: 'Más tiempo de voz y apoya el desarrollo',
+        backgroundAudioTitle: 'Audio en segundo plano',
+        backgroundAudioDescription: 'Cuando está activado, la voz permanece activa al salir de la app. Aparecerá una notificación mientras la voz esté en funcionamiento.',
+        backgroundAudio: 'Mantener la voz activa en segundo plano',
+        backgroundAudioSubtitle: 'Evitar que el sistema detenga la voz cuando la app está en segundo plano',
     },
 
     settingsAccount: {

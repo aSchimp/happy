@@ -592,6 +592,10 @@ export const pl: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${used} wykorzystano z ${limit}`,
         supportTitle: 'Ulepsz głos',
         supportSubtitle: 'Więcej czasu głosowego i wsparcie rozwoju',
+        backgroundAudioTitle: 'Dźwięk w tle',
+        backgroundAudioDescription: 'Po włączeniu głos pozostaje aktywny po opuszczeniu aplikacji. Podczas działania głosu wyświetlane będzie powiadomienie.',
+        backgroundAudio: 'Utrzymuj głos aktywny w tle',
+        backgroundAudioSubtitle: 'Zapobiegaj zatrzymywaniu głosu przez system, gdy aplikacja działa w tle',
     },
 
     settingsAccount: {

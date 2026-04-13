@@ -583,6 +583,10 @@ export const ja: TranslationStructure = {
         usageUsed: ({ used, limit }: { used: string; limit: string }) => `${limit}中${used}使用済み`,
         supportTitle: '音声をアップグレード',
         supportSubtitle: '音声時間を増やして開発を支援',
+        backgroundAudioTitle: 'バックグラウンドオーディオ',
+        backgroundAudioDescription: '有効にすると、アプリを離れても音声が有効なままになります。音声の実行中は通知が表示されます。',
+        backgroundAudio: 'バックグラウンドで音声を有効に保つ',
+        backgroundAudioSubtitle: 'アプリがバックグラウンドにあるとき、システムが音声を停止するのを防ぐ',
     },
 
     settingsAccount: {
