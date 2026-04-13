@@ -56,6 +56,8 @@ export default {
                 "android.permission.MODIFY_AUDIO_SETTINGS",
                 "android.permission.ACCESS_NETWORK_STATE",
                 "android.permission.POST_NOTIFICATIONS",
+                "android.permission.FOREGROUND_SERVICE",
+                "android.permission.FOREGROUND_SERVICE_MICROPHONE",
             ],
             blockedPermissions: [
                 "android.permission.ACTIVITY_RECOGNITION",

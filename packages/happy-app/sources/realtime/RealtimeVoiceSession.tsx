@@ -4,6 +4,7 @@ import { registerVoiceSession } from './RealtimeSession';
 import { storage } from '@/sync/storage';
 import { realtimeClientTools } from './realtimeClientTools';
 import { getElevenLabsCodeFromPreference } from '@/constants/Languages';
+import { useVoiceBackground } from './useVoiceBackground';
 import type { VoiceSession, VoiceSessionConfig } from './types';
 
 // Static reference to the conversation hook instance
@@ -173,6 +174,9 @@ export const RealtimeVoiceSession: React.FC = () => {
             console.debug('Realtime debug:', message);
         }
     });
+
+    // Keep voice connection alive when app is backgrounded (Android)
+    useVoiceBackground();
 
     const hasRegistered = useRef(false);
 

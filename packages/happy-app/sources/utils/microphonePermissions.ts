@@ -50,6 +50,23 @@ export async function requestMicrophonePermission(): Promise<MicrophonePermissio
 }
 
 /**
+ * Configure audio session for active voice — enables background audio on Android/iOS
+ * so the OS doesn't suspend the WebRTC connection when the app is backgrounded.
+ */
+export async function configureAudioForVoiceSession(active: boolean): Promise<void> {
+  if (Platform.OS === 'web') return;
+  try {
+    await AudioModule.setAudioModeAsync({
+      allowsRecording: active,
+      playsInSilentMode: active,
+      staysActiveInBackground: active,
+    });
+  } catch (error) {
+    console.warn('Failed to configure audio for voice session:', error);
+  }
+}
+
+/**
  * Check current microphone permission status without prompting
  */
 export async function checkMicrophonePermission(): Promise<MicrophonePermissionResult> {
